@@ -10,6 +10,6 @@ class MovieTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(movieTitle, style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold));
+    return Text(movieTitle, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold));
   }
 }

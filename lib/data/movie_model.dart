@@ -71,13 +71,17 @@ class MovieModel {
 
 @JsonSerializable()
 class GenreModel {
-  @JsonKey(name: 'genres')
-  List<dynamic> genres = [];
+  @JsonKey(name: 'id')
+  int id = 0;
+  @JsonKey(name: 'name')
+  String name = '';
 
   GenreModel({
-    required List<dynamic> genres,
+    required int id,
+    required String name,
   }) {
-    this.genres = genres;
+    this.id = id;
+    this.name = name;
   }
 
   factory GenreModel.fromJson(Map<String, dynamic> json) => _$GenreModelFromJson(json);

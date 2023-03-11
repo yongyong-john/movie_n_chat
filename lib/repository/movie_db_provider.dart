@@ -21,10 +21,10 @@ class MovieDBProvider {
 
   void genreMovies() async {
     try {
-      Response response =
-          await Dio().get('$MOVIE_DB_SERVER_HOST/3/genre/movie', queryParameters: {API_KEY: API_KEY_VALUE});
+      Response response = await Dio()
+          .get('$MOVIE_DB_SERVER_HOST/3/genre/movie/list', queryParameters: {API_KEY: API_KEY_VALUE, LANG: "en-US"});
       List<GenreModel> genres = [];
-      for (dynamic genre in response.data['results']) {
+      for (dynamic genre in response.data['genres']) {
         genres.add(GenreModel.fromJson(genre));
       }
       genresNotifier.genres = genres;

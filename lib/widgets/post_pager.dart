@@ -14,12 +14,12 @@ class PostPager extends StatefulWidget {
 }
 
 class _PostPagerState extends State<PostPager> {
-  static PageController _pageController = new PageController();
+  static PageController _pageController = PageController();
 
   @override
   void initState() {
     super.initState();
-    _pageController = PageController(viewportFraction: VIEW_PORT_FACTOR)..addListener(_onPageViewScrol);
+    _pageController = PageController(viewportFraction: VIEW_PORT_FACTOR)..addListener(_onPageViewScroll);
   }
 
   @override
@@ -28,7 +28,7 @@ class _PostPagerState extends State<PostPager> {
     super.dispose();
   }
 
-  void _onPageViewScrol() {
+  void _onPageViewScroll() {
     pageNotifier.value = _pageController.page!;
   }
 
@@ -47,7 +47,7 @@ class _PostPagerState extends State<PostPager> {
                   return GestureDetector(
                     onTap: () {
                       Navigator.of(context).push(PageRouteBuilder(
-                          transitionDuration: Duration(milliseconds: 700),
+                          transitionDuration: const Duration(milliseconds: 700),
                           pageBuilder: (_, __, ___) => DetailPage(movieNotifier.movies[index])));
                     },
                     child: Hero(

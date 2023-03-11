@@ -43,10 +43,12 @@ Map<String, dynamic> _$MovieModelToJson(MovieModel instance) =>
     };
 
 GenreModel _$GenreModelFromJson(Map<String, dynamic> json) => GenreModel(
-      genres: json['genres'] as List<dynamic>,
+      id: json['id'] as int,
+      name: json['name'] as String,
     );
 
 Map<String, dynamic> _$GenreModelToJson(GenreModel instance) =>
     <String, dynamic>{
-      'genres': instance.genres,
+      'id': instance.id,
+      'name': instance.name,
     };
