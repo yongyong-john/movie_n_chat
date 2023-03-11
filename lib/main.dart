@@ -11,15 +11,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        accentColor: Colors.blueGrey,
         secondaryHeaderColor: Colors.blueGrey[600],
-        backgroundColor: Colors.grey[200],
         textTheme: GoogleFonts.latoTextTheme(
           Theme.of(context).textTheme,
         ),
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue)
+            .copyWith(background: Colors.grey[200])
+            .copyWith(secondary: Colors.blueGrey),
       ),
-      home: MyHomePage(),
+      home: const MyHomePage(),
     );
   }
 }

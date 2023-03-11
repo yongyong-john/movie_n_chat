@@ -21,12 +21,13 @@ class DetailPage extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.of(context).push(PageRouteBuilder(
-            transitionDuration: Duration(milliseconds: 700), pageBuilder: (_, __, ___) => SelectSeatPage(movieModel)));
+            transitionDuration: const Duration(milliseconds: 700),
+            pageBuilder: (_, __, ___) => SelectSeatPage(movieModel)));
       },
       child: Stack(
         children: <Widget>[
           Scaffold(
-            backgroundColor: Theme.of(context).backgroundColor,
+            backgroundColor: Theme.of(context).colorScheme.background,
             body: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -34,7 +35,7 @@ class DetailPage extends StatelessWidget {
                   child: Hero(
                     tag: movieModel.posterPath,
                     child: Container(
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         borderRadius: BorderRadius.vertical(top: Radius.zero, bottom: Radius.circular(26)),
                         boxShadow: [
                           BoxShadow(
@@ -49,7 +50,7 @@ class DetailPage extends StatelessWidget {
                         ],
                       ),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.vertical(top: Radius.zero, bottom: Radius.circular(26)),
+                        borderRadius: const BorderRadius.vertical(top: Radius.zero, bottom: Radius.circular(26)),
                         child: Image.network(
                           buildImagePath(movieModel.posterPath),
                           fit: BoxFit.cover,
@@ -61,7 +62,7 @@ class DetailPage extends StatelessWidget {
                 SafeArea(
                   top: false,
                   child: Container(
-                    padding: EdgeInsets.only(top: 16, left: 16, right: 16),
+                    padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -69,8 +70,8 @@ class DetailPage extends StatelessWidget {
                       children: [
                         Rating(movieModel.voteAverage),
                         MovieTitle(movieModel.originalTitle),
-                        Genre(),
-                        SizedBox(
+                        Genre(movieModel.genreIds),
+                        const SizedBox(
                           height: 16,
                         )
                       ],

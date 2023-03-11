@@ -15,7 +15,7 @@ class Rating extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Container(
-          padding: EdgeInsets.symmetric(horizontal: 4),
+          padding: const EdgeInsets.symmetric(horizontal: 4),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(5),
               border: Border.all(
@@ -26,7 +26,7 @@ class Rating extends StatelessWidget {
             style: TextStyle(fontSize: 14, color: Theme.of(context).secondaryHeaderColor),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 4,
         ),
         Text(rating.toString(), style: TextStyle(fontSize: 14, color: Theme.of(context).secondaryHeaderColor))

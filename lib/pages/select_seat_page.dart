@@ -55,7 +55,7 @@ class _SelectSeatPageState extends State<SelectSeatPage> with SingleTickerProvid
       appBar: AppBar(
         title: Text(
           widget.movieModel.originalTitle,
-          style: TextStyle(color: Colors.white),
+          style: const TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.transparent,
       ),
@@ -115,7 +115,7 @@ class _SelectSeatPageState extends State<SelectSeatPage> with SingleTickerProvid
                   style: ButtonStyle(
                     foregroundColor: MaterialStateProperty.all<Color>(Colors.redAccent),
                   ),
-                  child: Text(
+                  child: const Text(
                     'CHECKOUT',
                     style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                   ),

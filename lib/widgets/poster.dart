@@ -15,11 +15,11 @@ class Poster extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.centerLeft,
-      padding: EdgeInsets.symmetric(vertical: 30),
+      padding: const EdgeInsets.symmetric(vertical: 30),
       child: Transform.scale(
         scale: scale,
         child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               borderRadius: BorderRadius.vertical(top: Radius.zero, bottom: Radius.circular(26)),
               boxShadow: [
                 BoxShadow(
