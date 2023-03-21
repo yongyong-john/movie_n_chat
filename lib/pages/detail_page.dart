@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:movie_n_chat/data/movie_model.dart';
 import 'package:movie_n_chat/helpers/image_path_helper.dart';

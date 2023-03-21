@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:movie_n_chat/pages/chat_page.dart';
 import 'package:movie_n_chat/pages/movie_page.dart';
 import 'package:movie_n_chat/pages/settings_page.dart';
+
+import 'chat_list_page.dart';
 
 const double side_gap = 16;
 
@@ -17,7 +18,7 @@ class _MainPageState extends State<MainPage> {
 
   static final List<Widget> _widgetOptions = <Widget>[
     const MoviePage(),
-    const ChatPage(),
+    const ChatListPage(),
     const SettingsPage(),
   ];
 
