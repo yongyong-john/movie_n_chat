@@ -1,16 +1,20 @@
 # movie_n_chat
+영화관 앱
 
-A new Flutter project.
+메인 화면
 
-## Getting Started
+![Main Page1](https://github.com/yongyong-john/movie_n_chat/blob/main/images/movie_1.PNG?raw=true)
+![Main Page2](https://github.com/yongyong-john/movie_n_chat/blob/main/images/movie_2.PNG?raw=true)
 
-This project is a starting point for a Flutter application.
+좌석 선택 화면
 
-A few resources to get you started if this is your first Flutter project:
+![Select Chair Page](https://github.com/yongyong-john/movie_n_chat/blob/main/images/select_chair.PNG?raw=true)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+https://www.youtube.com/watch?v=wm8scLpaV3U
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+위 링크의 Clone coding application
+
+
+추가 구현 사항
+
+적용된 Provider design pattern으로 theMovieDB의 영화정보 중 해당 영화의 Genre를 API로 호출하여 화면에 적용
