@@ -17,4 +17,4 @@ https://www.youtube.com/watch?v=wm8scLpaV3U
 
 추가 구현 사항
 
-적용된 Provider design pattern으로 theMovieDB의 영화정보 중 해당 영화의 Genre를 API로 호출하여 화면에 적용
+적용된 Provider design pattern으로 theMovieDB(https://www.themoviedb.org/)의 API 영화정보 중 해당 영화의 Genre의 API(https://developer.themoviedb.org/reference/genre-movie-list)를 호출하여 화면에 적용
